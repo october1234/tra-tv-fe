@@ -137,7 +137,7 @@ const trainsExample = [
 function App() {
   const [trains, setTrains] = useState<Train[]>([]);
   function fetchData() {
-    fetch("http://127.0.0.1:5000/")
+    fetch("https://be.tra-tv.personal.octsrv.org/")
       .then(res => res.json())
       .then(data => {setTrains(data)});
   }
