@@ -160,14 +160,14 @@ function App() {
         </div>
         <Clock/>
       </div>
-      <div className="grid text-white grid-cols-[8.5rem_8rem_15rem_8.5rem_1fr_5rem] h-full overflow-y-hidden bg-top">
+      <div className="grid text-white grid-cols-[9rem_8rem_15rem_8.5rem_1fr_5rem] h-full overflow-y-hidden bg-top">
         {trains.slice(0, 4).map((train, i) => {
           const className = "bg-neutral-900 bg-black";
           const bgColour = i % 2 === 0 ? "bg-neutral-900" : "bg-black";
 
           return (
             <>
-              <span className={`${bgColour} text-5xl text-center text-yellow-300 py-4 pl-4`}>{train.time}</span>
+              <span className={`${bgColour} text-5xl text-center text-yellow-300 py-4`}>{train.time}</span>
               <span className={`${bgColour} text-5xl text-left text-red-500 py-4 pl-2`}>{train.delay !== 0 && `+${train.delay}`}</span>
               <span className={`text-5xl text-center py-4 ${getColourFromType(train.type)}`}>{displayTrainType(train.type)}</span>
               <span className={`text-5xl text-center py-4 ${getColourFromType(train.type)}`}>{train.number}</span>
